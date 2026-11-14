@@ -1,0 +1,3 @@
+answer_id,model,question,atomic_claim,source_ref,supported,notes
+q001,example-model,What benefits are listed for job 3887473071?,Medical insurance is listed for job 3887473071.,benefits.csv:2,,Fill yes or no only after checking the source row
+q001,example-model,What benefits are listed for job 3887473071?,The job was posted by a company named ExampleCo.,,,This is an example invented claim to annotate - do not treat as verified
