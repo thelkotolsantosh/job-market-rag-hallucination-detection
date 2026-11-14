@@ -1,0 +1,2 @@
+salary_id,job_id,max_salary,med_salary,min_salary,pay_period,currency,compensation_type
+1,10000001,150000,,110000,YEARLY,USD,BASE_SALARY
