@@ -1,0 +1,82 @@
+{
+  "dataset": {
+    "source_rows": {
+      "job_skills.csv": 213768,
+      "job_industries.csv": 164808,
+      "benefits.csv": 67943,
+      "salaries.csv": 40785
+    },
+    "distinct_job_ids": 128427,
+    "total_source_rows": 487304,
+    "source_sha256": {
+      "job_skills.csv": "c81484f0f353e371e931b8302c6c1f69518dbb503363ef6f90311d11ca29b25d",
+      "job_industries.csv": "5ed3e44b863fcdeb7defa10f069e269e60c3a171b4f4940a7cd6ddbc3b2e482d",
+      "benefits.csv": "99492fd6f15d8c2f84fb376e2309346c8ebe4ba0510b5e69bd6c56520a1d7762",
+      "salaries.csv": "0f8741859c5f9f080509be564e982f95e1934d3ec03c2f59dfec567cf5cf28c2"
+    },
+    "schema_version": 1
+  },
+  "benchmark_size": 80,
+  "modes": {
+    "baseline": {
+      "mode": "baseline",
+      "counts": {
+        "questions": 80,
+        "answered": 70,
+        "abstained": 10,
+        "answers_with_unsupported_claims": 10,
+        "answers_with_irrelevant_claims": 20,
+        "unsupported_claims": 20,
+        "total_claims": 324,
+        "expected_answerable": 40,
+        "correct_abstentions": 10,
+        "unjustified_answers": 30,
+        "false_abstentions": 0,
+        "gold_claims": 123,
+        "recalled_gold_claims": 123,
+        "model_rejected_claims": 0
+      },
+      "rates_pct": {
+        "answer_hallucination_rate_all_questions": 12.5,
+        "answer_hallucination_rate_answered_only": 14.29,
+        "unsupported_claim_rate": 6.17,
+        "unjustified_answer_rate_all_questions": 37.5,
+        "abstention_rate": 12.5,
+        "correct_abstention_rate_on_unanswerable": 25.0,
+        "gold_claim_recall": 100.0
+      },
+      "elapsed_seconds": 0.003,
+      "definition": "Structured claims checked against exact values in the requested job's CSV records. Not a full natural-language hallucination detector."
+    },
+    "guarded": {
+      "mode": "guarded",
+      "counts": {
+        "questions": 80,
+        "answered": 40,
+        "abstained": 40,
+        "answers_with_unsupported_claims": 0,
+        "answers_with_irrelevant_claims": 0,
+        "unsupported_claims": 0,
+        "total_claims": 123,
+        "expected_answerable": 40,
+        "correct_abstentions": 40,
+        "unjustified_answers": 0,
+        "false_abstentions": 0,
+        "gold_claims": 123,
+        "recalled_gold_claims": 123,
+        "model_rejected_claims": 0
+      },
+      "rates_pct": {
+        "answer_hallucination_rate_all_questions": 0.0,
+        "answer_hallucination_rate_answered_only": 0.0,
+        "unsupported_claim_rate": 0.0,
+        "unjustified_answer_rate_all_questions": 0.0,
+        "abstention_rate": 50.0,
+        "correct_abstention_rate_on_unanswerable": 100.0,
+        "gold_claim_recall": 100.0
+      },
+      "elapsed_seconds": 0.002,
+      "definition": "Structured claims checked against exact values in the requested job's CSV records. Not a full natural-language hallucination detector."
+    }
+  }
+}
